@@ -1,0 +1,27 @@
+body { 
+    background-color: white; 
+    color: black;
+}
+
+.navbar { 
+    background-color: #ff9933; 
+    color: blue;
+}
+
+.navbar .nav-link { 
+    color: white; 
+}
+
+.navbar .nav-link:hover { 
+    color: #28a745; 
+}
+
+.btn-primary { 
+    background-color: #28a745; 
+    border-color: #28a745; 
+}
+
+.btn-primary:hover { 
+    background-color: #ff9933; 
+    border-color: #ff9933; 
+}
