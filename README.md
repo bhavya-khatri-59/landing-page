@@ -11,4 +11,7 @@ Key Requirements:<br>
 - Use any tech stack you are familiar with.<br>
 This task will test your ability to create functional, responsive designs while maintaining visual appeal."<br>
 <br>
-I combined the two pages into one
+I combined the two pages into one <br>
+<br>
+# Deployment Link: <br>
+https://landing-page-rzuz.onrender.com/
