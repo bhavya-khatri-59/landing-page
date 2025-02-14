@@ -5,24 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Indian Cuisine</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css files/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Indian Culture</a>
+            <a class="navbar-brand" href="{{ url_for('index') }}">Indian Culture</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="history.html">History</a></li>
-                    <li class="nav-item"><a class="nav-link" href="festivals.html">Festivals</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="#">Cuisine</a></li>
-                    <li class="nav-item"><a class="nav-link" href="art.html">Traditional Art</a></li>
-                    <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('index') }}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('history') }}">History</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('festivals') }}">Festivals</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="{{ url_for('cuisine') }}">Cuisine</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('art') }}">Traditional Art</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('feedback') }}">Feedback</a></li>
                 </ul>
             </div>
         </div>
@@ -34,39 +34,49 @@
         <p>Indian cuisine is renowned for its bold flavors, rich spices, and diverse regional specialties. Each state offers unique dishes that represent its culture and traditions.</p>
         
         <div class="text-center">
-            <div class="culture-card" style="width:100%; height:600px; background:#ddd;"><img src="images/cuisine2.jpg"></div>
+            <div class="culture-card" style="width:100%; height:600px; background:#ddd;">
+                <img src="{{ url_for('static', filename='images/cuisine2.jpg') }}" alt="Cuisine Image">
+            </div>
         </div>
 
         <h3 class="mt-4">North Indian Cuisine</h3>
         <p>North Indian food is known for its rich gravies, tandoori dishes, and use of dairy products. Popular dishes include butter chicken, biryani, and naan.</p>
         
         <div class="text-center">
-            <div class="culture-card" style="width:100%; height:600px; background:#ddd;"><img src="images/north.jpg"></div>
+            <div class="culture-card" style="width:100%; height:600px; background:#ddd;">
+                <img src="{{ url_for('static', filename='images/north.jpg') }}" alt="North Indian Cuisine">
+            </div>
         </div>
         
         <h3 class="mt-4">South Indian Cuisine</h3>
         <p>South Indian cuisine features rice-based dishes, tangy flavors, and coconut-infused curries. Idli, dosa, and sambar are some of its most famous offerings.</p>
         
         <div class="text-center">
-            <div class="culture-card" style="width:100%; height:600px; background:#ddd;"><img src="images/south.jpg"></div>
+            <div class="culture-card" style="width:100%; height:600px; background:#ddd;">
+                <img src="{{ url_for('static', filename='images/south.jpg') }}" alt="South Indian Cuisine">
+            </div>
         </div>
 
         <h3 class="mt-4">Eastern Indian Cuisine</h3>
         <p>Eastern Indian food includes a variety of sweets like rasgulla and sandesh. The cuisine also emphasizes seafood and mustard-flavored dishes.</p>
         
         <div class="text-center">
-            <div class="culture-card" style="width:100%; height:600px; background:#ddd;"><img src="images/east1.jpg"></div>
+            <div class="culture-card" style="width:100%; height:600px; background:#ddd;">
+                <img src="{{ url_for('static', filename='images/east1.jpg') }}" alt="Eastern Indian Cuisine">
+            </div>
         </div>
 
         <h3 class="mt-4">Western Indian Cuisine</h3>
         <p>Western India offers a mix of spicy Rajasthani dishes, Goan seafood, and Gujarati thalis. Popular items include pav bhaji, dhokla, and vindaloo.</p>
         
         <div class="text-center">
-            <div class="culture-card" style="width:100%; height:600px; background:#ddd;"><img src="images/east.jpg"></div>
+            <div class="culture-card" style="width:100%; height:600px; background:#ddd;">
+                <img src="{{ url_for('static', filename='images/east.jpg') }}" alt="Western Indian Cuisine">
+            </div>
         </div>
     </section>
     <section>
-        <br></br>
+        <br>
     </section>
     <footer class="footer">
         <div class="text-center py-3">© IEEE TEMS</div>

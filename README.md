@@ -12,5 +12,3 @@ Key Requirements:<br>
 This task will test your ability to create functional, responsive designs while maintaining visual appeal."<br>
 <br>
 I combined the two pages into one
-
-

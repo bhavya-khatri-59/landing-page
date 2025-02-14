@@ -5,30 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Festivals of India</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css files/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Indian Culture</a>
+            <a class="navbar-brand" href="{{ url_for('index') }}">Indian Culture</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="history.html">History</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="#">Festivals</a></li>
-                    <li class="nav-item"><a class="nav-link" href="cuisine.html">Cuisine</a></li>
-                    <li class="nav-item"><a class="nav-link" href="art.html">Traditional Art</a></li>
-                    <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('index') }}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('history') }}">History</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="{{ url_for('festivals') }}">Festivals</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('cuisine') }}">Cuisine</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('art') }}">Traditional Art</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('feedback') }}">Feedback</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    
     <!-- Festivals Content -->
     <section class="container mt-5">
         <h2 class="title">Festivals of India</h2>
@@ -38,28 +37,36 @@
         <p>Diwali is one of the most significant Hindu festivals, symbolizing the victory of light over darkness. It is celebrated with the lighting of diyas, fireworks, and sweets.</p>
         
         <div class="text-center">
-            <div class="culture-card" style="width:100%; height:600px; background:#ddd;"><img src="images/diwali.jpg"></div>
+            <div class="culture-card" style="width:100%; height:600px; background:#ddd;">
+                <img src="{{ url_for('static', filename='images/diwali.jpg') }}">
+            </div>
         </div>
         
         <h3 class="mt-4">Holi - Festival of Colors</h3>
         <p>Holi is a joyous festival where people play with colors, dance, and celebrate the arrival of spring. It fosters a spirit of unity and love.</p>
         
         <div class="text-center">
-            <div class="culture-card" style="width:100%; height:600px; background:#ddd;"><img src="images/holi.jpg"></div>
+            <div class="culture-card" style="width:100%; height:600px; background:#ddd;">
+                <img src="{{ url_for('static', filename='images/holi.jpg') }}">
+            </div>
         </div>
 
         <h3 class="mt-4">Eid - Celebration of Brotherhood</h3>
         <p>Eid marks the end of Ramadan, a month of fasting. It is celebrated with prayers, feasting, and the exchange of gifts among family and friends.</p>
         
         <div class="text-center">
-            <div class="culture-card" style="width:100%; height:600px; background:#ddd;"><img src="images/eid.jpg"></div>
+            <div class="culture-card" style="width:100%; height:600px; background:#ddd;">
+                <img src="{{ url_for('static', filename='images/eid.jpg') }}">
+            </div>
         </div>
 
         <h3 class="mt-4">Christmas - Festival of Joy</h3>
         <p>Christmas is celebrated by Christians across India with carols, midnight masses, and festive decorations, symbolizing the birth of Jesus Christ.</p>
         
         <div class="text-center">
-            <div class="culture-card" style="width:100%; height:600px; background:#ddd;"><img src="images/xmas.jpg"></div>
+            <div class="culture-card" style="width:100%; height:600px; background:#ddd;">
+                <img src="{{ url_for('static', filename='images/xmas.jpg') }}">
+            </div>
         </div>
     </section>
     <section>

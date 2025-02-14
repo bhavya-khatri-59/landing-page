@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Indian Culture & Heritage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('index') }}">Indian Culture</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('index') }}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('history') }}">History</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('festivals') }}">Festivals</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('cuisine') }}">Cuisine</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('art') }}">Traditional Art</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="{{ url_for('feedback') }}">Feedback</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container mt-5">
+        <h2 class="title">Feedback</h2>
+        <p class="text-center">We value your feedback! Let us know your thoughts.</p>
+        <form action="{{ url_for('submit_feedback') }}" method="POST">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" name="message" id="message" rows="4" placeholder="Your feedback" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </section>
+
+    <section>
+        <br>
+    </section>
+
+    <footer class="footer">
+        <div class="text-center py-3">© IEEE TEMS</div>
+    </footer>
+</body>
+</html>
